@@ -9,4 +9,5 @@ public interface CompanyService {
     boolean deleteCompanyByID(Long id);
     List<Company> getAllCompanies();
     void createCompany(Company company);
+    Company getCompanyByID(Long id);
 }

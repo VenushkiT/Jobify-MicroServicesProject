@@ -63,4 +63,9 @@ public class CompanyServiceImpl implements CompanyService {
     public void createCompany(Company company) {
         companyRepository.save(company);
     }
+
+    @Override
+    public Company getCompanyByID(Long id) {
+       return companyRepository.findById(id).orElse(null);
+    }
 }
