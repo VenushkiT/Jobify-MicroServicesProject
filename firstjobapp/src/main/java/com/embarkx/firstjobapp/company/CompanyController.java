@@ -18,7 +18,7 @@ public class CompanyController {
     public ResponseEntity <List<Company>> getAllCompanies() {
         return new ResponseEntity<>(companyService.getAllCompanies(), HttpStatus.OK);
     }
-    @PutMapping
+    @PutMapping("/{id}")
     public ResponseEntity<String>updateCompany(@PathVariable Long id, @RequestBody Company company) {
        companyService.updateCompany(company, id);
         return new ResponseEntity<>("Company updated successfully", HttpStatus.OK);
