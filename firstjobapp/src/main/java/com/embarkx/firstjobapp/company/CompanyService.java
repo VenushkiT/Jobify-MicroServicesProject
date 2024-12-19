@@ -10,4 +10,6 @@ public interface CompanyService {
     List<Company> getAllCompanies();
     void createCompany(Company company);
     Company getCompanyByID(Long id);
+
+    Company getCompany(Long companyID);
 }
