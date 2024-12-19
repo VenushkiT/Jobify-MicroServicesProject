@@ -41,7 +41,7 @@ public class CompanyController {
     }
 
     public ResponseEntity<Company> getCompanyByID(@PathVariable Long id) {
-        Company company = companyService.getCompanyByID(id);
+        Company company = companyService.getCompanyById(id);
         if (company != null) {
             return new ResponseEntity<>(company, HttpStatus.OK);
         } else {
