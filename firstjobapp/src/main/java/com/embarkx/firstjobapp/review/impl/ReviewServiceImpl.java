@@ -25,8 +25,8 @@ public class ReviewServiceImpl implements ReviewService {
     }
 
     @Override
-    public boolean addReview(Long companyID, Review review) {
-        Company company = companyService.getCompany(companyID);
+    public boolean addReview(Long companyId, Review review) {
+        Company company = companyService.getCompany(companyId);
         if (company != null) {
             review.setCompany(company);
             reviewRepository.save(review);
